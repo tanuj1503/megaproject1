@@ -1,0 +1,24 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.home{
+    width: 600px;
+    height: 300px;
+    background-color: wheat;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout{
+    padding: 0.7rem 1.3rem;
+    background-color:rgb(67, 67, 194);
+    color: white;
+}
+.buttons button{
+    margin: 0.4rem;
+}

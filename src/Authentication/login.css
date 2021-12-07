@@ -1,0 +1,85 @@
+.container2{
+    background-color: rgba(253, 251, 251, 0.171);
+}
+.doc-pointing{
+    position: absolute;
+    bottom: 0rem;
+    z-index: 1;
+}
+.address{
+    position: absolute;
+    top: 0.1rem;
+    right: 1rem;
+    width: 195px;
+    font-size: 0.6rem;
+    z-index: 10;
+}
+.login-container{
+position: relative;
+display: flex;
+align-items: center;
+width: 90%;
+height: 90.5vh;
+background-color: #1C7947;
+clip-path: circle(85% at 1% 10%);
+padding: 2rem;
+z-index: 2;
+}
+.form-container{
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4rem; */
+    background-color: white;
+    width: 260px;
+    border-radius: 18px;
+    padding: 0rem 0rem 1rem 0.4rem;
+    box-shadow: 1px 1px 20px rgba(12, 15, 14, 0.5);
+}
+.form-container img{
+    width: 180px;
+    height: 180px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    border: 0.2px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin: 0.4rem;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+}
+button{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    width: 120px;
+    /* background-color: rgba(28, 121, 71,1); */
+
+}
+button:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+.slogan{
+    width: 600px;
+    text-align: left;
+    font-size: 2.7rem;
+    color: white;
+    margin-left: 3rem;
+}
+.or{
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+@media (max-width: 993px){
+    .slogan{
+        font-size: 1rem;
+        color: green;
+    }
+}
