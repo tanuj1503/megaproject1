@@ -11,7 +11,7 @@ app.use(express.urlencoded());
 //connection to database
 //search "mongoose.connect() on internet then you will get this url = 'mongodb://localhost:27017/myLoginRegisterDB' "
 
-mongoose.connect("mongodb://localhost:27017/AuthenticationDB", 
+mongoose.connect("mongodb://localhost:27017/AuthenticationDB2", 
 {
     useNewUrlparser: true,
     useUnifiedTopology: true
@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
     email: String,
     password: String,
     date: Date,
-    address: String
+    address: String,
+    select: String
 });
 
 // Create Model
@@ -37,7 +38,7 @@ app.post("/register", (req, res) => {
     // const password = req.body.password;
     // const address = req.body.address;
 
-    const {name, email, password, date, address} = req.body;
+    const {name, email, password, date, address, select} = req.body;
 
     //if email is already present in database = user already registered
     User.findOne({email: email}, (err, user) => {
@@ -56,7 +57,8 @@ app.post("/register", (req, res) => {
                 email,
                 password,
                 date,
-                address
+                address,
+                select
             })
             user.save((err) => {
                 if(err){

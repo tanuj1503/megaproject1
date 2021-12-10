@@ -13,14 +13,16 @@ function Home() {
         const userInfo = localStorage.getItem("userInfo");
         const userDetail = userInfo!==null ? JSON.parse(userInfo) : [];
         setData(userDetail);
-        console.log("userInfo = ",userInfo);
-        console.log("userDetail = ",userDetail.name);
+        // console.log("userInfo = ",userInfo);
+        // console.log("userDetail = ",userDetail.name);
     }, []);
 
-    console.log("Data : ",data.name);
+    // console.log("Data : ",data.name);
 
     const back = () => {
-        history.push("/Login")
+        localStorage.removeItem("userInfo", data);
+        setData([]);
+        // history.push("/Login")
     }
 
     return (

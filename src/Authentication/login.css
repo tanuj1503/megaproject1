@@ -77,9 +77,9 @@ button:hover{
     font-size: 0.6rem;
     font-weight: 600;
 }
-@media (max-width: 993px){
+/* @media (max-width: 993px){
     .slogan{
         font-size: 1rem;
         color: green;
     }
-}
+} */

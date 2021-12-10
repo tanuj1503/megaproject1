@@ -56,11 +56,9 @@ function Login({ setLoginuser }) {
                     localStorage.setItem("userInfo", JSON.stringify(data));
                     alert(res.data.message);
                     setLoginuser(data);
-                    history.push("/");
+                    history.push("/")
                 })
         }
-
-
     }, [errors]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (

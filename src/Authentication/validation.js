@@ -1,7 +1,7 @@
 function validation(user) {
 
     const errors = {};
-    const {name, email, password, rePassword, date, address} = user;
+    const {name, email, password, rePassword, date, address, select} = user;
 
     if(name === ""){
         errors.name = "** full name is required"
@@ -37,6 +37,10 @@ function validation(user) {
 
     if(address === ""){
         errors.address = "** address is required"
+    }
+    if(select === "")
+    {
+        errors.select = " ** fill the required field";
     }
 
     return errors;

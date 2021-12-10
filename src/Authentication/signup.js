@@ -16,16 +16,17 @@ function Signup() {
         password: "",
         rePassword: "",
         date: "",
-        address: ""
+        address: "",
+        select: ""
     })
 
     const [errors, setErrors] = useState({});
     const [submit, setSubmit] = useState(false);
 
     const handlechange = (e) => {
-        // console.log(e.target);
+        console.log(e.target);
         const { name, value } = e.target;
-        // console.log("user", user);
+        console.log("user", user);
         setUser({ ...user, [name]: value })
     }
 
@@ -53,7 +54,7 @@ function Signup() {
                     <img src={two} className="meditation" alt="meditation" />
                     <form onSubmit={register}>
                         <div className="input-box">
-                            <input name="name" onChange={handlechange} type='text' placeholder='Full name' />
+                            <input name="name" onChange={handlechange} type='text' placeholder='Patient name' />
                             {errors.name && <span>{errors.name}</span>}
                         </div>
                         <div className="input-box">
@@ -75,6 +76,17 @@ function Signup() {
                         <div className="input-box">
                             <input name="address" value={user.address} onChange={handlechange} type='text' placeholder='Address' />
                             {errors.address && <span>{errors.address}</span>}
+                        </div>
+                        <div className="input-box">
+                            <select name="select" value={user.select} onChange={handlechange} placeholder="">
+                                <option>Why are you here for?</option>
+                                <option value="back pain">back Pain</option>
+                                <option value="joint pain">Joint Pain</option>
+                                <option value="paralysis">Paralysis</option>
+                                <option value="artritis">Arthiritis</option>
+                                <option value="Muscular pain">Muscular Pain</option>
+                            </select>
+                            {errors.select && <span>{errors.select}</span>}
                         </div>
                         <button type="submit">Register</button>
                         <p className="or">OR</p>

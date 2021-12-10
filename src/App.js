@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import LandingPage from './LandingPage';
 import Signup from './Authentication/signup';
 import Login from './Authentication/login';
 import PageNotFound from './Authentication/pageNotFound';
@@ -16,9 +17,9 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact >  
-          {user._id ? <Home setLoginuser={setLoginuser} /> : <Login setLoginuser={setLoginuser} /> }
+            {user._id && user ? <Home setLoginuser={setLoginuser} /> : <Login setLoginuser={setLoginuser} /> }
           </Route>
-          <Route path="/home"><Home setLoginuser={setLoginuser} /></Route>
+          <Route path="/Landingpage" component={LandingPage} />
           <Route path="/login"><Login setLoginuser={setLoginuser} /></Route>
           <Route path="/signup" component={Signup} />
           <Route  component={PageNotFound} />
@@ -29,4 +30,6 @@ function App() {
 }
 
 export default App;
+
+
 

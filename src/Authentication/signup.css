@@ -96,12 +96,27 @@ span{
     color: red;
     font-size: 0.6rem;
     margin-left: 0.4rem;
+    margin-top: -0.3rem;
+}
+select{
+    border: 0.2px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin: 0.4rem;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    width: 197px;
+    color: rgba(0, 0, 0, 0.7);
+}
+option{
+    border: 0.3px solid black;
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 993px){
+/* @media (max-width: 993px){
     .slogan{
         font-size: clamp(1.4rem, 4vh, 2rem);
         width: 350px;
         margin-left: 2rem;
     }
-}
+} */
